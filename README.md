@@ -6,22 +6,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Context of this project
+This project has been created to illustrate the pre-render feature of Angular Universal.
+You can find the full blog post at this addresses :
+French version : https://www.antoinebernard.com/fr/creer-un-site-statique-avec-angular
+English version : https://www.antoinebernard.com/create-a-static-website-with-angular
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Branches
+`master` branch contains the project without any Side Server Rendering, so it's a plain old Angular application BEFORE applying SSR or pre-rendering.
+`feature/static-website` is the same project in which was included the SSR and pre-render Business, run `npm run prerender` to see the static index.html pages being created in your dist folder.
