@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     AppRoutingModule
   ],
