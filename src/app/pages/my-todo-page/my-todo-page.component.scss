@@ -1,0 +1,26 @@
+ul.todo-list {
+    li {
+        list-style: none;
+        cursor: pointer;
+
+        .delete-button {
+            margin-left: 10pt;
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+            margin-left: 10pt;
+
+            &.done{
+                text-decoration: line-through;;
+            }
+        }
+
+        &:hover{            
+            .delete-button {
+                display: inline;
+            }
+        }
+    }
+}

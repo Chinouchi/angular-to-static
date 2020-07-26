@@ -1,0 +1,21 @@
+<section class="fdb-block py-0">
+    <div class="container py-5 my-5">
+        <div class="form-group">
+            <label>My new todo</label>
+            <input class="form-control" type="text" [(ngModel)]="newTodoName">
+        </div>
+        <button class="btn btn-primary" (click)="addNewTodo()"><i class="fa fa-plus"></i> Add this todo</button>
+        <hr>
+        <fieldset>
+            <legend>My todo list</legend>
+            <ul class="todo-list">
+                <li *ngFor="let todo of currentTodos$ | async; let i = index">
+                    <input [id]="'todo' + i" type="checkbox" [(ngModel)]="todo.isDone"><label class="label"
+                        [for]="'todo' + i" [class.done]="todo.isDone">{{todo.name}}</label>
+                    <span class="delete-button" (click)="deleteTodo(todo)"><i
+                            class=" fa fa-trash text-danger"></i></span>
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+</section>
